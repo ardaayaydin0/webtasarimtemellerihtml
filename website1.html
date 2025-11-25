@@ -1,0 +1,560 @@
+<html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Web Tasarımının Temelleri (HTML)</title>
+<style>
+    body { font-family: Arial, Helvetica, sans-serif; line-height:1.45; margin:24px; background:#f7f9fb; color:#222; }
+    header { margin-bottom:18px; }
+    h1 { margin:0 0 6px 0; font-size:22px; }
+    p.lead { margin:2px 0 12px 0; color:#444; }
+    .container { background:#fff; padding:18px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+    section { margin-bottom:18px; }
+    .question { margin:12px 0; padding:10px; border-left:4px solid #3b82f6; background:#fbfdff; border-radius:4px; }
+    label.qtext { display:block; font-weight:600; margin-bottom:6px; }
+    textarea { width:100%; min-height:64px; padding:8px; font-size:14px; border:1px solid #d1d5db; border-radius:4px; resize:vertical; }
+    details.answer summary { cursor:pointer; color:#2563eb; font-weight:600; margin-top:6px; }
+  </style>
+</head>
+<body>
+<header>
+<h1>Web Tasarımının Temelleri — Arda Ayaydın</h1>
+</header>
+<div class="container">
+<form id="examForm">
+<section>
+<h2>A) Klasik Sorular (1–25)</h2>
+<!-- 1 -->
+<div class="question" id="q1">
+<label class="qtext">1. HTML nedir? Web tasarımında ne amaçla kullanılır?</label>
+<textarea name="q1"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          HTML (HyperText Markup Language), web sayfalarının iskeletini oluşturan işaretleme dilidir.  
+          Metinleri, görselleri, bağlantıları ve yapısal bölümleri tanımlamak için kullanılır.
+          </details>
+</div>
+<!-- 2 -->
+<div class="question" id="q2">
+<label class="qtext">2. HTML neden bir programlama dili değil, bir işaretleme dili olarak kabul edilir?</label>
+<textarea name="q2"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          Çünkü HTML’de değişken, döngü, koşul gibi programlama mantığı yoktur.  
+          Sadece içerik işaretlenir ve tarayıcıya yapısı bildirilir.
+          </details>
+</div>
+<!-- 3 -->
+<div class="question" id="q3">
+<label class="qtext">3. &lt;html&gt;, &lt;head&gt; ve &lt;body&gt; etiketlerinin görevlerini açıklayınız.</label>
+<textarea name="q3"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>&lt;html&gt;</b>: Sayfanın tüm içeriğini kapsayan ana etiket.  
+          <b>&lt;head&gt;</b>: Başlık, stil, meta gibi görünmeyen ayarların olduğu bölüm.  
+          <b>&lt;body&gt;</b>: Kullanıcının gördüğü içeriklerin bulunduğu bölüm.
+          </details>
+</div>
+<!-- 4 -->
+<div class="question" id="q4">
+<label class="qtext">4. &lt;title&gt; etiketinin görevi nedir? Arama motorları açısından neden önemlidir?</label>
+<textarea name="q4"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          Sayfanın sekmede görünen başlığını belirler.  
+          SEO için önemlidir çünkü arama motorları sayfayı tanımlarken bu başlığı kullanır.
+          </details>
+</div>
+<!-- 5 -->
+<div class="question" id="q5">
+<label class="qtext">5. Container (kapsayıcı) ve self-closing etiketlere örnek vererek açıklayınız.</label>
+<textarea name="q5"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          Container etiketi: Açılış ve kapanış gerektirir (ör: &lt;div&gt;...&lt;/div&gt;).  
+          Self-closing etiketi: Kapanış kullanılmaz (ör: &lt;br&gt;, &lt;img&gt;).
+          </details>
+</div>
+<!-- 6 -->
+<div class="question" id="q6">
+<label class="qtext">6. &lt;h1&gt;–&lt;h6&gt; etiketleri ne işe yarar? Hangisi daha büyüktür ve neden bu önemlidir?</label>
+<textarea name="q6"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          Başlık etiketleridir.  
+          <b>&lt;h1&gt; en büyük</b>, &lt;h6&gt; en küçüktür.  
+          SEO açısından önemlidir; sayfa hiyerarşisini belirler.
+          </details>
+</div>
+<!-- 7 -->
+<div class="question" id="q7">
+<label class="qtext">7. Paragraf etiketi &lt;p&gt; nasıl çalışır? Hizalama işlemleri nasıl yapılır?</label>
+<textarea name="q7"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          &lt;p&gt; paragraf oluşturur.  
+          Hizalama CSS ile yapılır:  
+          <code>text-align: left|center|right|justify;</code>
+</details>
+</div>
+<!-- 8 -->
+<div class="question" id="q8">
+<label class="qtext">8. &lt;br&gt; ve &lt;hr&gt; etiketlerinin farkını açıklayın.</label>
+<textarea name="q8"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          &lt;br&gt; satır kırar.  
+          &lt;hr&gt; yatay çizgi çizer ve bölüm ayırır.
+          </details>
+</div>
+<!-- 9 -->
+<div class="question" id="q9">
+<label class="qtext">9. &lt;sub&gt; ve &lt;sup&gt; etiketleri hangi durumlarda kullanılır? Örnek veriniz.</label>
+<textarea name="q9"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>&lt;sub&gt;</b>: Alt simge – H<sub>2</sub>O  
+          <b>&lt;sup&gt;</b>: Üst simge – x<sup>2</sup>
+</details>
+</div>
+<!-- 10 -->
+<div class="question" id="q10">
+<label class="qtext">10. Body etiketindeki bgcolor, text, background, topmargin ve leftmargin özelliklerini açıklayınız.</label>
+<textarea name="q10"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>bgcolor:</b> Arka plan rengi  
+          <b>text:</b> Varsayılan metin rengi  
+          <b>background:</b> Arka plan resmi  
+          <b>topmargin:</b> Üst boşluk  
+          <b>leftmargin:</b> Sol boşluk  
+          (Eski HTML özellikleridir; güncelde CSS kullanılır.)
+          </details>
+</div>
+<!-- 11 -->
+<div class="question" id="q11">
+<label class="qtext">11. &lt;font&gt; etiketinin görevini açıklayın. Neden güncel sayfalarda önerilmez?</label>
+<textarea name="q11"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          &lt;font&gt; etiketi metnin rengini, boyutunu ve türünü ayarlamak için kullanılırdı.  
+          Güncel sayfalarda önerilmez çünkü HTML4 ile kullanımı bırakılmıştır;  
+          tüm stil özellikleri CSS ile yapılmalıdır.
+          </details>
+</div>
+<!-- 12 -->
+<div class="question" id="q12">
+<label class="qtext">12. Sırasız liste (UL) ve sıralı liste (OL) arasındaki farkı açıklayınız. Her birine bir örnek yazınız.</label>
+<textarea name="q12"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>UL:</b> Madde işaretli liste  
+          <b>OL:</b> Numaralandırılmış liste  
+          Örnek:  
+          &lt;ul&gt;&lt;li&gt;Elma&lt;/li&gt;&lt;/ul&gt;  
+          &lt;ol&gt;&lt;li&gt;1. Madde&lt;/li&gt;&lt;/ol&gt;
+          </details>
+</div>
+<!-- 13 -->
+<div class="question" id="q13">
+<label class="qtext">13. &lt;ol&gt; etiketi için kullanılabilen liste türlerini açıklayınız (1, A, a, I, i).</label>
+<textarea name="q13"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>1:</b> Normal sayılar  
+          <b>A:</b> Büyük harf  
+          <b>a:</b> Küçük harf  
+          <b>I:</b> Büyük Roma rakamları  
+          <b>i:</b> Küçük Roma rakamları
+          </details>
+</div>
+<!-- 14 -->
+<div class="question" id="q14">
+<label class="qtext">14. Bir sayfaya resim eklemek için hangi etiket kullanılır? src, width ve alt ne işe yarar?</label>
+<textarea name="q14"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          Resim eklemek için &lt;img&gt; kullanılır.  
+          <b>src:</b> Resim dosyasının yolu  
+          <b>width:</b> Genişlik  
+          <b>alt:</b> Resim yüklenmezse görünen alternatif metin
+          </details>
+</div>
+<!-- 15 -->
+<div class="question" id="q15">
+<label class="qtext">15. Link verme işleminde href ve target="_blank" özelliklerini açıklayınız.</label>
+<textarea name="q15"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>href:</b> Bağlantının gittiği adres  
+          <b>target="_blank":</b> Bağlantıyı yeni sekmede açar
+          </details>
+</div>
+<!-- 16 -->
+<div class="question" id="q16">
+<label class="qtext">16. Sayfa içi bağlantı (anchor) nasıl oluşturulur? Örnek kod yazınız.</label>
+<textarea name="q16"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          Bağlantı verilecek elemana ID atanır:  
+          &lt;h2 id="bolum1"&gt;Başlık&lt;/h2&gt;  
+          Bağlantı:  
+          &lt;a href="#bolum1"&gt;Git&lt;/a&gt;
+          </details>
+</div>
+<!-- 17 -->
+<div class="question" id="q17">
+<label class="qtext">17. Tablo oluşturmak için kullanılan temel etiketleri açıklayın: &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;.</label>
+<textarea name="q17"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>&lt;table&gt;</b>: Tablonun kendisi  
+          <b>&lt;tr&gt;</b>: Satır  
+          <b>&lt;td&gt;</b>: Veri hücresi  
+          <b>&lt;th&gt;</b>: Başlık hücresi (bold ve ortalı)
+          </details>
+</div>
+<!-- 18 -->
+<div class="question" id="q18">
+<label class="qtext">18. Tablo hücrelerinde colspan ve rowspan ne işe yarar?</label>
+<textarea name="q18"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>colspan:</b> Hücreyi yatayda genişletir (sütun birleştirir).  
+          <b>rowspan:</b> Hücreyi dikeyde genişletir (satır birleştirir).
+          </details>
+</div>
+<!-- 19 -->
+<div class="question" id="q19">
+<label class="qtext">19. &lt;div&gt; etiketinin görevi nedir? Tasarımda neden önemlidir?</label>
+<textarea name="q19"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          &lt;div&gt; blok seviyesinde bir kapsayıcıdır.  
+          Sayfayı bölümlere ayırmak, düzen kurmak ve CSS ile tasarlamak için kullanılır.
+          </details>
+</div>
+<!-- 20 -->
+<div class="question" id="q20">
+<label class="qtext">20. HTML5 yapısal etiketlerden en az 4 tanesini yazıp görevlerini açıklayınız.</label>
+<textarea name="q20"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>&lt;header&gt;</b>: Üst bilgi  
+          <b>&lt;nav&gt;</b>: Menü/navigasyon  
+          <b>&lt;section&gt;</b>: Bölüm  
+          <b>&lt;article&gt;</b>: Makale içerik  
+          <b>&lt;footer&gt;</b>: Alt bilgi
+          </details>
+</div>
+<!-- 21 -->
+<div class="question" id="q21">
+<label class="qtext">21. CSS'in HTML’den farkı nedir? Neden CSS kullanılır?</label>
+<textarea name="q21"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          HTML yapı oluşturur, CSS görünümü düzenler.  
+          CSS sayesinde sayfa tasarımı daha modern, düzenli ve kolay yönetilebilir olur.
+          </details>
+</div>
+<!-- 22 -->
+<div class="question" id="q22">
+<label class="qtext">22. CSS yazımının üç yöntemi nedir? Her birine örnek yazınız.</label>
+<textarea name="q22"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>Inline:</b> &lt;p style="color:red"&gt;  
+          <b>Internal:</b> &lt;style&gt;p{color:red}&lt;/style&gt;  
+          <b>External:</b> &lt;link rel="stylesheet" href="style.css"&gt;
+          </details>
+</div>
+<!-- 23 -->
+<div class="question" id="q23">
+<label class="qtext">23. Class (.class) ve ID (#id) seçiciler arasındaki temel fark nedir?</label>
+<textarea name="q23"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>Class:</b> Birden fazla öğede kullanılabilir.  
+          <b>ID:</b> Bir sayfada yalnızca bir öğede kullanılmalıdır.
+          </details>
+</div>
+<!-- 24 -->
+<div class="question" id="q24">
+<label class="qtext">24. Margin ve padding arasındaki fark nedir? Bir kutu yapısı üzerinden açıklayınız.</label>
+<textarea name="q24"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+<b>Margin:</b> Kutunun dış boşluğudur.  
+          <b>Padding:</b> Kutunun iç boşluğudur, içerik ile kenar arasını açar.
+          </details>
+</div>
+<!-- 25 -->
+<div class="question" id="q25">
+<label class="qtext">25. Basit bir menü yapısı (UL – LI) oluşturmak için gerekli HTML ve CSS kodlarını yazınız.</label>
+<textarea name="q25"></textarea>
+<details class="answer"><summary>Cevabı Göster</summary>
+          HTML:  
+          &lt;ul&gt;  
+            &lt;li&gt;Ana Sayfa&lt;/li&gt;  
+            &lt;li&gt;Hakkında&lt;/li&gt;  
+          &lt;/ul&gt;  
+          CSS:  
+          ul{list-style:none;}  
+          li{display:inline-block; margin-right:10px;}
+          </details>
+</div>
+<section>
+<h2>B) Test Soruları (26–50)</h2>
+<!-- 26 -->
+<div class="question mcq" id="q26">
+<label class="qtext">26. HTML dosyasının temel iskeleti aşağıdakilerden hangisidir?</label>
+<div class="options">
+<label><input name="q26" type="radio" value="A"/> A) &lt;body&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;/body&gt;&lt;/html&gt;</label>
+<label><input name="q26" type="radio" value="B"/> B) &lt;html&gt;&lt;body&gt;&lt;head&gt;&lt;/head&gt;&lt;/body&gt;&lt;/html&gt;</label>
+<label><input name="q26" type="radio" value="C"/> C) &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</label>
+<label><input name="q26" type="radio" value="D"/> D) &lt;head&gt;&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</label>
+</div>
+<span class="result"></span></div>
+<!-- 27 -->
+<div class="question mcq" id="q27">
+<label class="qtext">27. Aşağıdaki etiketlerden hangisi alt simge (subscript) oluşturur?</label>
+<div class="options">
+<label><input name="q27" type="radio" value="A"/> A) &lt;sup&gt;</label>
+<label><input name="q27" type="radio" value="B"/> B) &lt;under&gt;</label>
+<label><input name="q27" type="radio" value="C"/> C) &lt;sub&gt;</label>
+<label><input name="q27" type="radio" value="D"/> D) &lt;low&gt;</label>
+</div>
+<span class="result"></span></div>
+<!-- 28 -->
+<div class="question mcq" id="q28">
+<label class="qtext">28. &lt;p align="center"&gt; etiketi ne yapar?</label>
+<div class="options">
+<label><input name="q28" type="radio" value="A"/> A) Metni italik yapar</label>
+<label><input name="q28" type="radio" value="B"/> B) Paragrafı sayfada ortalar</label>
+<label><input name="q28" type="radio" value="C"/> C) Sayfaya resim ekler</label>
+<label><input name="q28" type="radio" value="D"/> D) Tablo hizalaması yapar</label>
+</div>
+<span class="result"></span></div>
+<!-- 29 -->
+<div class="question mcq" id="q29">
+<label class="qtext">29. Aşağıdaki etiketlerden hangisi self-closing bir etikettir?</label>
+<div class="options">
+<label><input name="q29" type="radio" value="A"/> A) &lt;p&gt;</label>
+<label><input name="q29" type="radio" value="B"/> B) &lt;div&gt;</label>
+<label><input name="q29" type="radio" value="C"/> C) &lt;br&gt;</label>
+<label><input name="q29" type="radio" value="D"/> D) &lt;span&gt;</label>
+</div>
+<span class="result"></span></div>
+<!-- 30 -->
+<div class="question mcq" id="q30">
+<label class="qtext">30. “Sayfaya resim ekleme” işlemi hangi etiket ile yapılır?</label>
+<div class="options">
+<label><input name="q30" type="radio" value="A"/> A) &lt;image&gt;</label>
+<label><input name="q30" type="radio" value="B"/> B) &lt;pic&gt;</label>
+<label><input name="q30" type="radio" value="C"/> C) &lt;img&gt;</label>
+<label><input name="q30" type="radio" value="D"/> D) &lt;photo&gt;</label>
+</div>
+<span class="result"></span></div>
+<!-- 31 -->
+<div class="question mcq" id="q31">
+<label class="qtext">31. alt özelliği bir resimde ne için kullanılır?</label>
+<div class="options">
+<label><input name="q31" type="radio" value="A"/> A) Renk ayarı</label>
+<label><input name="q31" type="radio" value="B"/> B) Yüklenmezse görünen metin</label>
+<label><input name="q31" type="radio" value="C"/> C) Gölgelendirme</label>
+<label><input name="q31" type="radio" value="D"/> D) Çerçeve çizme</label>
+</div>
+<span class="result"></span></div>
+<!-- 32 -->
+<div class="question mcq" id="q32">
+<label class="qtext">32. Aşağıdaki CSS yazım yöntemlerinden hangisi doğrudur?</label>
+<div class="options">
+<label><input name="q32" type="radio" value="A"/> A) &lt;style.css&gt;</label>
+<label><input name="q32" type="radio" value="B"/> B) &lt;css&gt;…&lt;/css&gt;</label>
+<label><input name="q32" type="radio" value="C"/> C) &lt;link rel="stylesheet" href="style.css"&gt;</label>
+<label><input name="q32" type="radio" value="D"/> D) &lt;import style="style.css"&gt;</label>
+</div>
+<span class="result"></span></div>
+<!-- 33 -->
+<div class="question mcq" id="q33">
+<label class="qtext">33. Aşağıdakilerden hangisi HTML5 yapısal etiketi değildir?</label>
+<div class="options">
+<label><input name="q33" type="radio" value="A"/> A) &lt;header&gt;</label>
+<label><input name="q33" type="radio" value="B"/> B) &lt;article&gt;</label>
+<label><input name="q33" type="radio" value="C"/> C) &lt;footer&gt;</label>
+<label><input name="q33" type="radio" value="D"/> D) &lt;picturebox&gt;</label>
+</div>
+<span class="result"></span></div>
+<!-- 34 -->
+<div class="question mcq" id="q34">
+<label class="qtext">34. Bir sayfada sadece bir kez kullanılması gereken seçici hangisidir?</label>
+<div class="options">
+<label><input name="q34" type="radio" value="A"/> A) class</label>
+<label><input name="q34" type="radio" value="B"/> B) id</label>
+<label><input name="q34" type="radio" value="C"/> C) tag</label>
+<label><input name="q34" type="radio" value="D"/> D) type</label>
+</div>
+<span class="result"></span></div>
+<!-- 35 -->
+<div class="question mcq" id="q35">
+<label class="qtext">35. Hücreleri yatay yönde birleştirmek için hangi özellik kullanılır?</label>
+<div class="options">
+<label><input name="q35" type="radio" value="A"/> A) rowspan</label>
+<label><input name="q35" type="radio" value="B"/> B) colspan</label>
+<label><input name="q35" type="radio" value="C"/> C) merge</label>
+<label><input name="q35" type="radio" value="D"/> D) combine-x</label>
+</div>
+<span class="result"></span></div>
+<!-- 36 -->
+<div class="question mcq" id="q36">
+<label class="qtext">36. Bir bağlantıyı yeni sekmede açmak için hangisi kullanılır?</label>
+<div class="options">
+<label><input name="q36" type="radio" value="A"/> A) opennew</label>
+<label><input name="q36" type="radio" value="B"/> B) target="_blank"</label>
+<label><input name="q36" type="radio" value="C"/> C) href="new"</label>
+<label><input name="q36" type="radio" value="D"/> D) link="tab"</label>
+</div>
+<span class="result"></span></div>
+<!-- 37 -->
+<div class="question mcq" id="q37">
+<label class="qtext">37. Aşağıdakilerden hangisi bir CSS seçici türüdür?</label>
+<div class="options">
+<label><input name="q37" type="radio" value="A"/> A) element</label>
+<label><input name="q37" type="radio" value="B"/> B) class</label>
+<label><input name="q37" type="radio" value="C"/> C) id</label>
+<label><input name="q37" type="radio" value="D"/> D) Hepsi</label>
+</div>
+<span class="result"></span></div>
+<!-- 38 -->
+<div class="question mcq" id="q38">
+<label class="qtext">38. &lt;ol type="A"&gt; etiketi nasıl bir liste oluşturur?</label>
+<div class="options">
+<label><input name="q38" type="radio" value="A"/> A) Roma rakamları</label>
+<label><input name="q38" type="radio" value="B"/> B) Küçük harf</label>
+<label><input name="q38" type="radio" value="C"/> C) Büyük harf</label>
+<label><input name="q38" type="radio" value="D"/> D) Normal numara</label>
+</div>
+<span class="result"></span></div>
+<!-- 39 -->
+<div class="question mcq" id="q39">
+<label class="qtext">39. Aşağıdakilerden hangisi CSS’in amacıdır?</label>
+<div class="options">
+<label><input name="q39" type="radio" value="A"/> A) Sayfayı çalıştırmak</label>
+<label><input name="q39" type="radio" value="B"/> B) Sunucuya bağlanmak</label>
+<label><input name="q39" type="radio" value="C"/> C) Görsel düzenleme yapmak</label>
+<label><input name="q39" type="radio" value="D"/> D) Kodları hızlandırmak</label>
+</div>
+<span class="result"></span></div>
+<!-- 40 -->
+<div class="question mcq" id="q40">
+<label class="qtext">40. &lt;hr&gt; etiketi ne işe yarar?</label>
+<div class="options">
+<label><input name="q40" type="radio" value="A"/> A) Paragraf oluşturur</label>
+<label><input name="q40" type="radio" value="B"/> B) Yatay çizgi çizer</label>
+<label><input name="q40" type="radio" value="C"/> C) Resim ekler</label>
+<label><input name="q40" type="radio" value="D"/> D) Liste başlatır</label>
+</div>
+<span class="result"></span></div>
+<!-- 41 -->
+<div class="question mcq" id="q41">
+<label class="qtext">41. HTML'de yorum (comment) eklemek için hangi sözdizimi kullanılır?</label>
+<div class="options">
+<label><input name="q41" type="radio" value="A"/> A) /* ... */</label>
+<label><input name="q41" type="radio" value="B"/> B) // ...</label>
+<label><input name="q41" type="radio" value="C"/> C) &lt;!-- ... --&gt;</label>
+<label><input name="q41" type="radio" value="D"/> D) &lt;!-- ... --&gt;</label>
+</div>
+<span class="result"></span></div>
+<!-- 42 -->
+<div class="question mcq" id="q42">
+<label class="qtext">42. Bir form elemanını sıfırlayan input türü hangisidir?</label>
+<div class="options">
+<label><input name="q42" type="radio" value="A"/> A) &lt;input type="submit"&gt;</label>
+<label><input name="q42" type="radio" value="B"/> B) &lt;input type="reset"&gt;</label>
+<label><input name="q42" type="radio" value="C"/> C) &lt;input type="button"&gt;</label>
+<label><input name="q42" type="radio" value="D"/> D) &lt;input type="file"&gt;</label>
+</div>
+<span class="result"></span></div>
+<!-- 43 -->
+<div class="question mcq" id="q43">
+<label class="qtext">43. Radio ile checkbox arasındaki temel fark nedir?</label>
+<div class="options">
+<label><input name="q43" type="radio" value="A"/> A) Radio çoklu seçim, checkbox tek seçim</label>
+<label><input name="q43" type="radio" value="B"/> B) Radio tek seçim, checkbox çoklu seçim</label>
+<label><input name="q43" type="radio" value="C"/> C) İkisi de aynı</label>
+<label><input name="q43" type="radio" value="D"/> D) Radio sadece formda çalışmaz</label>
+</div>
+<span class="result"></span></div>
+<!-- 44 -->
+<div class="question mcq" id="q44">
+<label class="qtext">44. &lt;ul&gt; listesinin madde işaretlerini kaldırmak için hangi CSS property kullanılır?</label>
+<div class="options">
+<label><input name="q44" type="radio" value="A"/> A) list-style:none;</label>
+<label><input name="q44" type="radio" value="B"/> B) display:none;</label>
+<label><input name="q44" type="radio" value="C"/> C) visibility:hidden;</label>
+<label><input name="q44" type="radio" value="D"/> D) list:remove;</label>
+</div>
+<span class="result"></span></div>
+<!-- 45 -->
+<div class="question mcq" id="q45">
+<label class="qtext">45. CSS'de bir sınıf tanımlarken hangi sembol kullanılır?</label>
+<div class="options">
+<label><input name="q45" type="radio" value="A"/> A) #</label>
+<label><input name="q45" type="radio" value="B"/> B) .</label>
+<label><input name="q45" type="radio" value="C"/> C) %</label>
+<label><input name="q45" type="radio" value="D"/> D) &amp;</label>
+</div>
+<span class="result"></span></div>
+<!-- 46 -->
+<div class="question mcq" id="q46">
+<label class="qtext">46. Inline CSS örneği hangisidir?</label>
+<div class="options">
+<label><input name="q46" type="radio" value="A"/> A) &lt;style&gt;p{color:red}&lt;/style&gt;</label>
+<label><input name="q46" type="radio" value="B"/> B) &lt;p style="color:red"&gt;...&lt;/p&gt;</label>
+<label><input name="q46" type="radio" value="C"/> C) &lt;link rel="stylesheet"&gt;</label>
+<label><input name="q46" type="radio" value="D"/> D) @import</label>
+</div>
+<span class="result"></span></div>
+<!-- 47 -->
+<div class="question mcq" id="q47">
+<label class="qtext">47. Bir div'i sola hizalamak için hangi CSS property kullanılır?</label>
+<div class="options">
+<label><input name="q47" type="radio" value="A"/> A) align:left;</label>
+<label><input name="q47" type="radio" value="B"/> B) float:left;</label>
+<label><input name="q47" type="radio" value="C"/> C) position:left;</label>
+<label><input name="q47" type="radio" value="D"/> D) display:left;</label>
+</div>
+<span class="result"></span></div>
+<!-- 48 -->
+<div class="question mcq" id="q48">
+<label class="qtext">48. &lt;nav&gt; etiketi hangi amaçla kullanılır?</label>
+<div class="options">
+<label><input name="q48" type="radio" value="A"/> A) Sayfa başlığı</label>
+<label><input name="q48" type="radio" value="B"/> B) Navigasyon / menü için</label>
+<label><input name="q48" type="radio" value="C"/> C) İçerik yazısı</label>
+<label><input name="q48" type="radio" value="D"/> D) Form alanı</label>
+</div>
+<span class="result"></span></div>
+<!-- 49 -->
+<div class="question mcq" id="q49">
+<label class="qtext">49. CSS'de bir öğenin iç boşluğunu (padding) ayarlamak için hangi property kullanılır?</label>
+<div class="options">
+<label><input name="q49" type="radio" value="A"/> A) margin</label>
+<label><input name="q49" type="radio" value="B"/> B) padding</label>
+<label><input name="q49" type="radio" value="C"/> C) border</label>
+<label><input name="q49" type="radio" value="D"/> D) spacing</label>
+</div>
+<span class="result"></span></div>
+<!-- 50 -->
+<div class="question mcq" id="q50">
+<label class="qtext">50. Form gönderme butonu hangi input türü ile oluşturulur?</label>
+<div class="options">
+<label><input name="q50" type="radio" value="A"/> A) &lt;input type="reset"&gt;</label>
+<label><input name="q50" type="radio" value="B"/> B) &lt;input type="button"&gt;</label>
+<label><input name="q50" type="radio" value="C"/> C) &lt;input type="submit"&gt;</label>
+<label><input name="q50" type="radio" value="D"/> D) &lt;input type="file"&gt;</label>
+</div>
+<span class="result"></span></div>
+</section>
+</section><button id="checkBtn" type="button">Kontrol Et</button>
+</form>
+</div>
+<script>
+document.getElementById('checkBtn').addEventListener('click', function(){
+    const answers = {26: 'C', 27: 'C', 28: 'B', 29: 'C', 30: 'C', 31: 'B', 32: 'C', 33: 'D', 34: 'B', 35: 'B', 36: 'B', 37: 'D', 38: 'C', 39: 'C', 40: 'B', 41: 'C', 42: 'B', 43: 'B', 44: 'A', 45: 'B', 46: 'B', 47: 'B', 48: 'B', 49: 'B', 50: 'C'};
+    for (let i=26;i<=50;i++){
+        let q = document.getElementById('q'+i);
+        if(!q) continue;
+        let sel = q.querySelector('input[type=radio]:checked');
+        let res = q.querySelector('.result');
+        if(!sel){
+            res.textContent = " (Seçim yok)";
+            res.style.color = "orange";
+        } else if(sel.value === answers[i]){
+            res.textContent = " ✓ Doğru";
+            res.style.color = "green";
+        } else {
+            res.textContent = " ✗ Yanlış";
+            res.style.color = "red";
+        }
+    }
+});
+</script></body>
+</html>
